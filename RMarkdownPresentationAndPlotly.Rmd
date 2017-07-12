@@ -35,7 +35,8 @@ p1 <- plot_ly(data, x = ~carat, y = ~price, color = ~carat,
         size = ~carat, text = ~paste("Clarity: ", clarity))
 
 p2 <- plot_ly(data, x = ~carat, y = ~price, z = ~depth,
-        color = ~carat, size = ~carat, text = ~paste("Clarity: ", clarity)) 
+        color = ~carat, size = ~carat, 
+        text = ~paste("Clarity: ", clarity)) 
 ```
 
 ## Show 2D Scatter Plot
