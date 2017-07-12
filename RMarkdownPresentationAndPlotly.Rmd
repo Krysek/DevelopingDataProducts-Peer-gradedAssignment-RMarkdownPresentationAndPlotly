@@ -24,8 +24,8 @@ The rubric contains the following two questions:
 ## Load and Prepare Data
 ```{r, echo = TRUE}
 library(plotly)
-data <- diamonds[sample(nrow(diamonds), 5000), 
-                 c("carat", "price", "clarity", "price")]
+data <- diamonds[sample(nrow(diamonds), 2500), 
+                 c("carat", "price", "clarity", "depth")]
 summary(data)
 ```
 
@@ -34,8 +34,8 @@ summary(data)
 p1 <- plot_ly(data, x = ~carat, y = ~price, color = ~carat,
         size = ~carat, text = ~paste("Clarity: ", clarity))
 
-p2 <- plot_ly(data, x = ~carat, y = ~price, z = ~price, 
-              color = ~carat) 
+p2 <- plot_ly(data, x = ~carat, y = ~price, z = ~depth,
+        color = ~carat, size = ~carat, text = ~paste("Clarity: ", clarity)) 
 ```
 
 ## Show 2D Scatter Plot
