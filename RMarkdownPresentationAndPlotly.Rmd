@@ -51,4 +51,4 @@ ggplotly(p2)
 ```
 
 
-## Thank you
+## Thank You
